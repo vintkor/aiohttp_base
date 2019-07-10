@@ -7,7 +7,6 @@ import asyncio
 import uvloop
 from config import url_helper
 from tortoise import Tortoise
-from config.db_services import DBAsyncClient
 from run_migrations import run_migrations
 
 
@@ -22,7 +21,6 @@ async def init_db():
 
 async def create_app():
     app = web.Application()
-    app['db'] = DBAsyncClient(**settings.DB_CONFIG)
     loop.create_task(init_db())
     loop.create_task(run_migrations())
 
