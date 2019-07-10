@@ -8,6 +8,10 @@ aiohttp = "*"
 aiohttp-devtools = "*"
 "aiohttp-jinja2" = "*"
 uvloop = "*"
+aiopg = "*"
+sqlalchemy = "*"
+tortoise-orm = "*"
+asyncpg = "*"
 
 [dev-packages]
 
